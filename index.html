@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="uk">
+<meta charset="utf-8">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bryndakgrow.com/">
+<meta property="og:title" content="BRYNDAK — навчання з нарощування волосся">
+<meta property="og:description" content="Дводенне навчання італійській технології капсульного нарощування волосся з практикою на моделі і місяцем у клубі BRYNDAK GROW.">
+<meta property="og:image" content="https://bryndakgrow.com/img/portrait.jpg">
+<title>BRYNDAK — навчання з нарощування волосся</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Дводенне навчання капсульному нарощуванню волосся з практикою на моделі, авторським посібником і місяцем у клубі BRYNDAK GROW.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=PT+Mono&family=Marck+Script&display=swap">
+<style>
+/* Layout: editorial salon brochure. Burgundy and cream bands alternate; condensed serif headlines
+   with italic accent words, typewriter body text, polaroid photos, one marquee band. Single, deliberate look. */
+:root {
+  --wine: #6a1d1f;       /* main burgundy */
+  --wine-deep: #4a1214;  /* darker burgundy for footer, cards */
+  --cream: #f8f4e9;      /* paper background */
+  --taupe: #a8968a;      /* soft buttons, lines */
+  --ink: #2e1a17;        /* brown-black text on cream */
+  --paper: #fffdf7;      /* polaroid frame */
+  --tape: rgba(222, 205, 170, .78);
+
+  --f-display: "Oranienbaum", "Didot", "Bodoni 72", "Times New Roman", serif;
+  --f-italic: "Cormorant Garamond", "Garamond", "Georgia", serif;
+  --f-body: "PT Mono", "Courier New", ui-monospace, monospace;
+  --f-hand: "Marck Script", "Segoe Script", cursive;
+
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --maxw: 1120px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-left: var(--gutter-l);
+  padding-right: var(--gutter-r);
+}
+h1, h2, h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: .98;
+  letter-spacing: -.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 em, h2 em, h3 em {
+  font-family: var(--f-italic);
+  font-style: italic;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+p { margin: 0; max-width: 62ch; }
+.hand { font-family: var(--f-hand); font-size: 1.9rem; line-height: 1.1; }
+.label {
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  min-height: 46px;
+  padding: .7em 1.6em;
+  border-radius: 999px;
+  font-family: var(--f-body);
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
+.btn-wine { background: var(--wine); color: var(--cream); }
+.btn-wine:hover { background: var(--wine-deep); }
+.btn-taupe { background: var(--taupe); color: var(--paper); }
+.btn-taupe:hover { background: #95837a; }
+.btn-line { border: 1px solid currentColor; }
+.btn-line:hover { background: var(--cream); color: var(--wine); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Header */
+.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--wine);
+  color: var(--cream);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 30;
+  background: var(--wine);
+}
+.top .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 12px;
+}
+.logo {
+  font-family: var(--f-display);
+  font-size: 1.6rem;
+  letter-spacing: .06em;
+  text-decoration: none;
+}
+.nav { display: flex; gap: 22px; }
+.nav a { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.top .btn { min-height: 38px; padding: .5em 1.2em; font-size: .68rem; }
+@media (max-width: 860px) { .nav { display: none; } }
+
+/* Hero */
+.hero { background: var(--wine); color: var(--cream); overflow: hidden; }
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 40px;
+  align-items: end;
+  padding-block: 56px 0;
+}
+.hero-text { padding-bottom: 64px; display: grid; gap: 26px; min-width: 0; }
+.hero h1 { font-size: clamp(2.9rem, 7.2vw, 6.2rem); }
+.hero h1 em { font-size: 1.04em; }
+.hero p { font-size: .95rem; opacity: .92; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.hero-facts span::before { content: "✦ "; color: var(--taupe); }
+.hero-photo { position: relative; align-self: stretch; display: flex; align-items: flex-end; min-width: 0; padding-top: 4.2rem; }
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 999px 999px 0 0;
+}
+.hero-photo .hand {
+  position: absolute;
+  left: 0;
+  top: .4rem;
+  color: var(--cream);
+  font-size: 2.2rem;
+  white-space: nowrap;
+  transform: rotate(-4deg);
+}
+@media (max-width: 820px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-block: 36px 0; gap: 8px; }
+  .hero-text { padding-bottom: 32px; }
+  .hero-photo { max-width: 340px; justify-self: center; width: 100%; }
+  .hero-photo { padding-top: 3.6rem; }
+  .hero-photo .hand { left: 0; top: .2rem; font-size: 1.9rem; }
+}
+
+/* Intro */
+.intro { padding-block: 88px; text-align: center; }
+.intro .wrap { display: grid; gap: 22px; justify-items: center; }
+.intro h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); color: var(--wine); max-width: 18ch; }
+.intro p { margin-inline: auto; }
+.intro .hand { color: var(--wine); transform: rotate(-4deg); }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 14px;
+  border-top: 1px solid var(--taupe);
+  border-bottom: 1px solid var(--taupe);
+  padding-block: 20px;
+}
+.stat b { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.2rem); color: var(--wine); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat span { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; }
+
+/* Polaroids */
+.polaroid {
+  background: var(--paper);
+  margin: 0;
+  padding: 12px 12px 40px;
+  box-shadow: 0 18px 40px rgba(30, 6, 6, .35);
+  position: relative;
+}
+.polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.polaroid figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  text-align: center;
+  font-family: var(--f-hand);
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+.polaroid::before {
+  content: "";
+  position: absolute;
+  top: -14px; left: 50%;
+  width: 96px; height: 28px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: var(--tape);
+}
+
+/* Program */
+.program { background: var(--wine); color: var(--cream); padding-block: 88px; overflow: hidden; }
+.program-head {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.program-photos { position: relative; min-height: 420px; }
+.program-photos .polaroid { width: 62%; position: absolute; }
+.program-photos .p1 { left: 0; top: 0; transform: rotate(-5deg); }
+.program-photos .p1 figcaption { text-align: left; padding-left: 16px; }
+.program-photos .p2 { right: 0; top: 70px; width: 56%; transform: rotate(6deg); }
+.program-head h2 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); }
+.program-head .copy { display: grid; gap: 18px; min-width: 0; }
+.days { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.day { border-top: 1px solid rgba(248, 244, 233, .35); padding-top: 22px; display: grid; gap: 18px; min-width: 0; }
+.day h3 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.block { display: grid; grid-template-columns: 78px 1fr; gap: 14px; padding-block: 14px; border-bottom: 1px dashed rgba(248, 244, 233, .25); }
+.block:last-child { border-bottom: 0; }
+.block .label { opacity: .7; padding-top: 4px; }
+.block h4 { font-family: var(--f-italic); font-style: italic; font-weight: 600; font-size: 1.45rem; line-height: 1.15; margin: 0 0 6px; }
+.block p { font-size: .88rem; opacity: .9; }
+.block ul { margin: 6px 0 0; padding-left: 1.1em; font-size: .88rem; opacity: .9; }
+.block li { margin-bottom: 4px; }
+.extra-day {
+  margin-top: 36px;
+  padding: 22px 26px;
+  border: 1px solid rgba(248, 244, 233, .4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+.extra-day p { font-size: .9rem; }
+.extra-day .hand { font-size: 1.7rem; color: var(--taupe); }
+@media (max-width: 860px) {
+  .program-head { grid-template-columns: 1fr; gap: 32px; }
+  .program-photos { min-height: 0; height: clamp(330px, 100vw, 480px); max-width: 480px; width: 100%; margin-inline: auto; }
+  .days { grid-template-columns: 1fr; }
+}
+
+/* Included */
+.included { padding-block: 88px; }
+.included .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; }
+.included-photo { position: relative; }
+.included-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.included-photo .stamp {
+  position: absolute;
+  right: -18px; bottom: -18px;
+  width: 128px; height: 128px;
+  border-radius: 50%;
+  background: var(--wine);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: var(--f-hand);
+  font-size: 1.15rem;
+  line-height: 1.1;
+  padding: 14px;
+  transform: rotate(-10deg);
+}
+.included .copy { display: grid; gap: 20px; min-width: 0; }
+.included h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--wine); }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.checks li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding-block: 12px; border-bottom: 1px solid rgba(168, 150, 138, .5); }
+.checks li::before { content: "✦"; color: var(--wine); }
+@media (max-width: 820px) {
+  .included .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .included-photo { max-width: 400px; width: calc(100% - 18px); }
+}
+
+.ig-link { color: var(--wine); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.ig-link:hover { text-decoration-thickness: 2px; }
+
+/* Certificate */
+.cert { padding-block: 0 96px; }
+.cert .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+.cert .copy { display: grid; gap: 20px; min-width: 0; }
+.cert h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--wine); }
+.cert .hand { color: var(--wine); transform: rotate(-3deg); justify-self: start; }
+.cert-img { margin: 0; justify-self: center; width: 100%; max-width: 400px; background: var(--paper); padding: 12px; box-shadow: 0 18px 40px rgba(46, 26, 23, .25); transform: rotate(2deg); }
+@media (max-width: 820px) { .cert .wrap { grid-template-columns: 1fr; gap: 36px; } .cert-img { max-width: 320px; } }
+
+/* Marquee */
+.marquee { overflow: hidden; padding-block: 20px; border-top: 1px solid var(--taupe); border-bottom: 1px solid var(--taupe); }
+.marquee-track { display: flex; width: max-content; animation: run 34s linear infinite; }
+.marquee span {
+  font-family: var(--f-display);
+  font-size: clamp(3.4rem, 10vw, 7.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--wine);
+  white-space: nowrap;
+  padding-right: .5em;
+}
+.marquee span em { font-family: var(--f-italic); font-weight: 500; text-transform: none; }
+@keyframes run { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+/* Club */
+.club {
+  position: relative;
+  color: var(--cream);
+  padding-block: 96px;
+  background:
+    linear-gradient(rgba(46, 14, 12, .82), rgba(46, 14, 12, .88)),
+    url("img/work-tool-2.jpg") center 30% / cover no-repeat,
+    var(--wine-deep);
+}
+.club-head { display: grid; gap: 18px; justify-items: center; text-align: center; margin-bottom: 48px; }
+.club-head h2 { font-size: clamp(2.4rem, 6vw, 4.6rem); }
+.club-head p { margin-inline: auto; opacity: .92; }
+.club-head .hand { color: var(--taupe); }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 900px; margin-inline: auto; }
+.card { background: var(--wine); padding: 28px 28px 32px; display: grid; gap: 12px; align-content: start; }
+.card h3 { font-size: 1.7rem; }
+.card p { font-size: .88rem; opacity: .9; }
+.card.wide { grid-column: 1 / -1; background: var(--cream); color: var(--ink); }
+.card.wide h3 { color: var(--wine); }
+.club-price {
+  max-width: 900px;
+  margin: 28px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(248, 244, 233, .35);
+  padding-top: 24px;
+}
+.club-price .price { font-family: var(--f-display); font-size: 2.2rem; line-height: 1; }
+.club-price .price small { font-family: var(--f-body); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; opacity: .8; }
+.club-price p { font-size: .85rem; opacity: .85; max-width: 38ch; }
+@media (max-width: 640px) { .cards { grid-template-columns: 1fr; } .card { padding: 24px 20px 26px; } }
+
+/* Offers */
+.offers { padding-block: 96px; }
+.offers-head { display: grid; gap: 12px; margin-bottom: 40px; }
+.offers-head h2 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); color: var(--wine); }
+.offer-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; align-items: stretch; }
+.offer { padding: 36px 32px; display: grid; gap: 18px; align-content: start; min-width: 0; }
+.offer.main { background: var(--wine); color: var(--cream); }
+.offer.guide { border: 1px solid var(--wine); }
+.offer .label { opacity: .8; }
+.offer h3 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.offer.guide h3 { color: var(--wine); }
+.offer .price { font-family: var(--f-display); font-size: clamp(3.4rem, 7vw, 5rem); line-height: .9; font-variant-numeric: tabular-nums; }
+.offer.guide .price { color: var(--wine); }
+.offer ul { margin: 0; padding: 0; list-style: none; display: grid; }
+.offer li { padding-block: 9px; border-bottom: 1px solid currentColor; border-color: rgba(168, 150, 138, .5); font-size: .88rem; display: grid; grid-template-columns: 22px 1fr; gap: 8px; }
+.offer li::before { content: "—"; opacity: .7; }
+.offer .btn-row { margin-top: 6px; }
+@media (max-width: 820px) { .offer-grid { grid-template-columns: 1fr; } .offer { padding: 28px 20px; } }
+
+/* Reviews */
+.reviews { background: var(--wine); color: var(--cream); padding-block: 88px; }
+.reviews-head { display: grid; gap: 12px; justify-items: center; text-align: center; margin-bottom: 44px; }
+.reviews-head h2 { font-size: clamp(2.4rem, 5.4vw, 4rem); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.review {
+  margin: 0;
+  border: 1px dashed rgba(248, 244, 233, .45);
+  padding: 30px 24px;
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  min-height: 260px;
+}
+.review .stars { letter-spacing: .3em; color: var(--taupe); }
+.review blockquote { margin: 0; font-family: var(--f-italic); font-style: italic; font-size: 1.35rem; line-height: 1.3; }
+.review .who { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; opacity: .75; }
+.review.placeholder blockquote { opacity: .55; }
+@media (max-width: 860px) { .review-grid { grid-template-columns: 1fr; } .review { min-height: 0; } }
+
+/* Final CTA */
+.final { padding-block: 96px; overflow: hidden; }
+.final .wrap { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.final h2 { font-size: clamp(2.4rem, 6vw, 4.6rem); color: var(--wine); }
+.final .copy { display: grid; gap: 20px; min-width: 0; }
+.final .polaroid { width: 260px; transform: rotate(4deg); }
+@media (max-width: 760px) { .final .wrap { grid-template-columns: 1fr; } .final .polaroid { width: 220px; justify-self: center; } }
+
+footer { background: var(--wine-deep); color: var(--cream); padding-block: 28px; font-size: .78rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center; }
+footer .logo { font-size: 1.3rem; }
+footer a { opacity: .85; }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">BRYNDAK</a>
+    <nav class="nav" aria-label="Розділи сайту">
+      <a href="#program">Програма</a>
+      <a href="#included">Що входить</a>
+      <a href="#certificate">Сертифікат</a>
+      <a href="#club">Клуб</a>
+      <a href="#price">Ціни</a>
+      <a href="#reviews">Відгуки</a>
+    </nav>
+    <a class="btn btn-taupe" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Консультація</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="label">Італійська технологія капсульного нарощування</p>
+        <h1>Навчання з <em>нарощування</em> волосся</h1>
+        <p>За два дні ти пройдеш шлях від теорії до власної роботи на моделі. Покажу, як працювати з волоссям, кератином і клієнтками, а після навчання залишуся поруч у клубі BRYNDAK GROW.</p>
+        <div class="hero-facts"><span>2 дні</span><span>практика на моделі</span><span>авторський посібник</span></div>
+        <div class="btn-row">
+          <a class="btn btn-taupe" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Купити навчання</a>
+          <a class="btn btn-line" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Отримати консультацію</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/portrait.jpg" alt="Дарія Бриндак, викладачка навчання з нарощування волосся" width="972" height="1200">
+        <span class="hand">твій старт тут</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap">
+      <span class="hand">Привіт, я Дарія!</span>
+      <h2>Нова професія за <em>2 дні</em>, без хаосу і зайвої теорії</h2>
+      <p>Я навчаю дівчат професійній італійській технології капсульного нарощування так, щоб після курсу вони впевнено брали перших клієнток. Спочатку розбираємо будову волосся, матеріали та інструменти, потім ставимо руку на болванці, а другого дня працюємо на моделі.</p>
+      <div class="stats">
+        <div class="stat"><b>2</b><span>дні навчання</span></div>
+        <div class="stat"><b>7</b><span>блоків програми</span></div>
+        <div class="stat"><b>1</b><span>місяць у клубі в подарунок</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program" id="program">
+    <div class="wrap">
+      <div class="program-head">
+        <div class="program-photos">
+          <figure class="polaroid p1"><img src="img/work-tool.jpg" alt="Встановлення капсул щипцями" width="926" height="1200"><figcaption>капсулювання</figcaption></figure>
+          <figure class="polaroid p2"><img src="img/work-look.jpg" alt="Робота з моделлю під час навчання" width="930" height="1200"><figcaption>робота на моделі</figcaption></figure>
+        </div>
+        <div class="copy">
+          <p class="label">Програма</p>
+          <h2>Що ти вивчиш <em>по днях</em></h2>
+          <p>Перший день повністю про базу: теорія, консультація, матеріали, зняття, капсуляція і перше нарощування на болванці. Другий день про практику на моделі і про те, як почати заробляти.</p>
+        </div>
+      </div>
+
+      <div class="days">
+        <div class="day">
+          <h3>День <em>перший</em></h3>
+          <div class="block">
+            <span class="label">Блок 1</span>
+            <div>
+              <h4>Теорія і консультація</h4>
+              <ul>
+                <li>Будова та структура волосся</li>
+                <li>Типи волосся та їхні особливості</li>
+                <li>Базова трихологія і протипоказання до нарощування</li>
+                <li>Як правильно провести консультацію</li>
+                <li>Як підібрати натуральне волосся під клієнтку</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">Блок 2</span>
+            <div>
+              <h4>Матеріали та інструменти</h4>
+              <ul>
+                <li>Інструменти майстра і як ними правильно користуватися</li>
+                <li>Кератин: властивості та особливості роботи з ним</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">Блок 3</span>
+            <div>
+              <h4>Зняття волосся</h4>
+              <ul>
+                <li>Як зняти нарощене волосся і не пошкодити власне волосся клієнтки</li>
+                <li>Правила розплутування колтунів</li>
+                <li>Сортування волосся</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">Блок 4</span>
+            <div>
+              <h4>Капсуляція</h4>
+              <p>Робимо капсули своїми руками.</p>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">Блок 5</span>
+            <div>
+              <h4>Нарощування на болванці</h4>
+              <p>Перше нарощування під моїм контролем.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="day">
+          <h3>День <em>другий</em></h3>
+          <div class="block">
+            <span class="label">Блок 1</span>
+            <div>
+              <h4>Практика на моделі</h4>
+              <ul>
+                <li>Поділ голови на зони</li>
+                <li>Встановлення капсул</li>
+                <li>Відпрацювання технік і постановка руки</li>
+                <li>Аналіз готової роботи</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block">
+            <span class="label">Блок 2</span>
+            <div>
+              <h4>Клієнтки і старт у професії</h4>
+              <ul>
+                <li>Розрахунок вартості роботи</li>
+                <li>Підбір густини та довжини волосся</li>
+                <li>Як знайти перших клієнток і почати заробляти з нуля</li>
+                <li>Як розвивати свій особистий бренд</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="extra-day">
+        <p>Якщо я бачу, що тобі потрібно більше часу на закріплення матеріалу, додаю ще один день навчання.</p>
+        <span class="hand">без поспіху</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="included" id="included">
+    <div class="wrap">
+      <div class="included-photo">
+        <img src="img/teaching.jpg" alt="Викладачка під час заняття" width="835" height="1200">
+        <span class="stamp">посібник автора</span>
+      </div>
+      <div class="copy">
+        <p class="label">Що потрібно з собою</p>
+        <h2>Тільки <em>гарний настрій</em></h2>
+        <p>Усе інше я даю сама: матеріали для роботи і посібник, який я розробила спеціально для навчання.</p>
+        <ul class="checks">
+          <li>Авторський посібник для навчання</li>
+          <li>Матеріали та інструменти на час навчання</li>
+          <li>Практика на болванці і на моделі</li>
+          <li>Іменний сертифікат BRYNDAK після навчання</li>
+          <li>Місяць у клубі BRYNDAK GROW безкоштовно</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-wine" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Записатися на навчання</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cert" id="certificate">
+    <div class="wrap">
+      <div class="copy">
+        <p class="label">Після навчання</p>
+        <h2>Твій <em>сертифікат</em></h2>
+        <p>Після навчання ти отримуєш іменний сертифікат BRYNDAK. Він підтверджує, що ти пройшла базове навчання професійній італійській технології капсульного нарощування волосся і семінар з роботи з інструментами та матеріалами.</p>
+        <span class="hand">а далі тільки практика</span>
+      </div>
+      <figure class="cert-img"><img src="img/certificate.jpg" alt="Сертифікат BRYNDAK про проходження навчання капсульному нарощуванню" width="1000" height="1400"></figure>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Bryndak <em>grow</em> ✦ Bryndak <em>grow</em> ✦</span>
+      <span>Bryndak <em>grow</em> ✦ Bryndak <em>grow</em> ✦</span>
+    </div>
+  </div>
+
+  <section class="club" id="club">
+    <div class="wrap">
+      <div class="club-head">
+        <p class="label">Закритий клуб для моїх учениць</p>
+        <h2>Bryndak <em>grow</em></h2>
+        <p>Купити вхід у клуб окремо не можна, лише через моє навчання. Кожна учениця після курсу отримує місяць у клубі в подарунок.</p>
+        <span class="hand">Сертифікат — це не фініш. Це старт.</span>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Зустрічі <em>зі мною</em></h3>
+          <p>Регулярні зустрічі, де можна поставити будь-яке питання про роботу і розвиток.</p>
+        </div>
+        <div class="card">
+          <h3>Розбори <em>робіт</em></h3>
+          <p>Розбираємо твої роботи і складні випадки з клієнтками.</p>
+        </div>
+        <div class="card">
+          <h3>Міні-<em>навчання</em></h3>
+          <p>Короткі уроки на нові теми, щоб ти росла і після курсу.</p>
+        </div>
+        <div class="card">
+          <h3>Ти <em>не сама</em></h3>
+          <p>Поруч наставниця і дівчата, які проходять той самий шлях.</p>
+        </div>
+        <div class="card wide">
+          <h3>Практика <em>і заробіток</em></h3>
+          <p>Найголовніше: я беру дівчат із клубу на капсуляції та нарощування в 4 руки. Це реальна практика і перші гроші в професії.</p>
+        </div>
+      </div>
+      <div class="club-price">
+        <div class="price">1500 грн <small>/ місяць</small></div>
+        <p>Перший місяць безкоштовно для кожної учениці навчання.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers" id="price">
+    <div class="wrap">
+      <div class="offers-head">
+        <p class="label">Ціни</p>
+        <h2>Обери <em>свій</em> старт</h2>
+      </div>
+      <div class="offer-grid">
+        <div class="offer main">
+          <p class="label">Навчання</p>
+          <h3>Капсульне <em>нарощування</em></h3>
+          <div class="price">450 €</div>
+          <ul>
+            <li>2 дні навчання: теорія і практика</li>
+            <li>Робота на болванці та на моделі</li>
+            <li>Авторський посібник</li>
+            <li>Додатковий день, якщо потрібне закріплення</li>
+            <li>Іменний сертифікат</li>
+            <li>Місяць у клубі BRYNDAK GROW у подарунок</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-taupe" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Купити навчання</a>
+            <a class="btn btn-line" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Отримати консультацію</a>
+          </div>
+        </div>
+        <div class="offer guide">
+          <p class="label">Гайд</p>
+          <h3>Чи підійде <em>тобі</em> ця професія?</h3>
+          <div class="price">350 грн</div>
+          <p>Для тих, хто ще сумнівається. Усе, що варто знати перед стартом.</p>
+          <ul>
+            <li>Чи підійде тобі ця професія</li>
+            <li>Урок «З чого почати»</li>
+            <li>Урок «Як шукати клієнтів»</li>
+            <li>Список усього потрібного для старту з посиланнями і цінами</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-wine" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Купити гайд</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="reviews-head">
+        <p class="label">Відгуки</p>
+        <h2>Що кажуть <em>учениці</em></h2>
+      </div>
+      <div class="review-grid">
+        <figure class="review placeholder">
+          <div class="stars">★★★★★</div>
+          <blockquote>Тут буде відгук учениці.</blockquote>
+          <figcaption class="who">Ім’я учениці</figcaption>
+        </figure>
+        <figure class="review placeholder">
+          <div class="stars">★★★★★</div>
+          <blockquote>Тут буде відгук учениці.</blockquote>
+          <figcaption class="who">Ім’я учениці</figcaption>
+        </figure>
+        <figure class="review placeholder">
+          <div class="stars">★★★★★</div>
+          <blockquote>Тут буде відгук учениці.</blockquote>
+          <figcaption class="who">Ім’я учениці</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="copy">
+        <span class="hand" style="color: var(--wine)">Почнемо разом?</span>
+        <h2>Твоя нова <em>професія</em> починається тут</h2>
+        <p>Напиши мені в Instagram <a class="ig-link" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">@bryndak.dariia</a>: розкажу про найближчі дати навчання і відповім на всі питання.</p>
+        <div class="btn-row">
+          <a class="btn btn-wine" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Купити навчання</a>
+          <a class="btn btn-taupe" data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Отримати консультацію</a>
+        </div>
+      </div>
+      <figure class="polaroid"><img src="img/work-tool-2.jpg" alt="Викладачка під час нарощування" width="871" height="1200"><figcaption>до зустрічі</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">BRYNDAK</span>
+    <span>Навчання з нарощування волосся</span>
+    <a data-ig href="https://www.instagram.com/bryndak.dariia/" target="_blank" rel="noopener">Instagram @bryndak.dariia</a>
+  </div>
+</footer>
